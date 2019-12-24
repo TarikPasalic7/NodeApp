@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+
+
+<div class="container">
+        <header class="jumbotron">
+            <div class="container">
+    
+                    <h1>camp</h1>
+                    <p>Choose your camp</p>
+                    <p> <a  class="btn btn-primary btn-large" href="/camp/new">Add camp</a></p>
+            </div>
+          
+        </header>
+    
+        <div class="row text-center" style="display:flex;flex-wrap:wrap;">
+    
+                <%  campa.forEach((camp)=>{ %>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="thumbnail">
+    
+                                <h4><%= camp.name %></h4>
+                                <img src="<%= camp.imgurl  %>" alt="nema" width="60%" height="50%">
+                                
+                                 <div class="caption">
+                                     <p>caption</p>
+                                     <p><a href="/camp/<%= camp._id %>" class="btn btn-primary">More info</a></p>
+                                    
+                                 </div>
+                        </div>
+                    
+                    </div>
+                    
+                    
+                        <%  });%>
+    
+    
+        </div>
+       
+      </div>
+    <% include ../partials/footer %>
